@@ -1,0 +1,29 @@
+{
+  "name": "telegram-news-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "pm2 start ./server/ --name BobrNewsBot",
+    "dev": "nodemon ./server/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "nodemonConfig": {
+    "ignore": ["__db__/"]
+  },
+  "dependencies": {
+    "dotenv": "^14.2.0",
+    "fast-xml-parser": "^4.0.1",
+    "html-entities": "^2.3.3",
+    "lowdb": "^3.0.0",
+    "node-fetch": "^3.2.6",
+    "node-telegram-bot-api": "^0.57.0",
+    "request": "^2.88.2"
+  }
+}
