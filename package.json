@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start ./server/ --name BobrNewsBot",
+    "start": "pm2 start ./server/index.js --name BobrNewsBot",
     "dev": "nodemon ./server/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
