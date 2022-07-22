@@ -75,7 +75,7 @@ export default async (bot) => {
       .filter(n => new Date(n.data.date) > new Date(lastUpdate))
       .sort((a, b) => new Date(a.data.date) > new Date(b.data.date) ? 1 : -1);
 
-    filteredNews.slice(filteredNews.length > 10 ? -10 : 0).forEach((news, idx) => {
+    filteredNews.forEach((news, idx) => {
       const message = `<b>${news.data.title}</b>
 
 ${news.data.description}
