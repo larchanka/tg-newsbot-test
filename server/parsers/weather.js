@@ -54,7 +54,7 @@ export const weather = (bot) => {
 ··· Ветер <i>" + windSpeed + "м/с</i>\n\
 \n\
 #погода";
-console.log(process.env.CHAT_ID)
+
             await bot.sendMessage(process.env.CHAT_ID, message, {
                 parse_mode: 'HTML',
             });
