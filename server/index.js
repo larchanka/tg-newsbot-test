@@ -40,7 +40,7 @@ const Timers = () => {
     console.log('Setting timeout');
     const now = new Date();
     const morning = new Date();
-    morning.setHours(5);
+    morning.setHours(6);
     morning.setMinutes(0);
     morning.setSeconds(0);
 
@@ -52,6 +52,7 @@ const Timers = () => {
     
     console.log('\nNext weather', new Date(now.getTime() + weatherTimeout).toISOString());
     timeouts.weather = setTimeout(getWeather, weatherTimeout);
+    getWeather();
 
     timeouts.news = setTimeout(getNews, 1000);
 
