@@ -32,7 +32,7 @@ export default (bot) => {
 };
 
 export const weather = (bot) => {
-
+console.log(`https://api.openweathermap.org/data/2.5/forecast/daily?units=metric&id=${process.env.WEATHER_CITY}&appid=${process.env.WEATHER_KEY}`)
     fetch(`https://api.openweathermap.org/data/2.5/forecast/daily?units=metric&id=${process.env.WEATHER_CITY}&appid=${process.env.WEATHER_KEY}`)
         .then(resp => resp.json())
         .then(data => {
