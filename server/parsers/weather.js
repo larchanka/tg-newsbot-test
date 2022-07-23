@@ -35,9 +35,9 @@ export const weather = (bot) => {
 
     fetch(`https://api.openweathermap.org/data/2.5/forecast/daily?units=metric&id=${process.env.WEATHER_CITY}&appid=${process.env.WEATHER_KEY}`)
         .then(resp => resp.json())
-        .then(data => {
+        .then(async data => {
             const dayForecast = data.list[0];
-            console.log({dayForecast})
+
             const unixTime = dayForecast.dt;
             const maxTmp = dayForecast.temp.max;
             const minTmp = dayForecast.temp.min;
@@ -55,7 +55,7 @@ export const weather = (bot) => {
 \n\
 #погода";
 
-            bot.sendMessage(process.env.CHAT_ID, message, {
+            await bot.sendMessage(process.env.CHAT_ID, message, {
                 parse_mode: 'HTML',
             });
         })
